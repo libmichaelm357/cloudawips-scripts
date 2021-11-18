@@ -42,3 +42,10 @@ echo "network speed."
 echo "--- Begin pulling of latest CloudAWIPS Image from Docker Hub ---"
 sleep 3
 sudo docker pull unidata/cloudawips
+
+sleep 3 # Pause before running the container
+
+echo "--- The installer has successfully pulled the latest CloudAWIPS Image. ---"
+echo "The latest CloudAWIPS image was successfully pulled from Docker Hub. Now"
+echo "attempting to start the container with default settings. A shell script"
+echo "will be saved to your home directory for easy startup of the container."
