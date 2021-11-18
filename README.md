@@ -1,2 +1,3 @@
-# cloudawips-scripts
-A collection of scripts that will allow forecasters to install the CloudAWIPS Docker Container.
+# Install CloudAWIPS
+Ubuntu/Debian: *cloudawips_deb.sh*
+CentOS 7: *cloudawips_cos.sh*
