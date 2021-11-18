@@ -49,3 +49,9 @@ echo "--- The installer has successfully pulled the latest CloudAWIPS Image. ---
 echo "The latest CloudAWIPS image was successfully pulled from Docker Hub. Now"
 echo "attempting to start the container with default settings. A shell script"
 echo "will be saved to your home directory for easy startup of the container."
+echo " "
+echo "To access CloudAWIPS, please navigate to localhost:6080 -- you should be"
+echo "presented with
+echo "--- The installer has successfully pulled the latest CloudAWIPS Image. ---"
+wget -O startcloudawips.sh # CREATE THE STARTUP SCRIPT AND LINK HERE!
+docker run -p 6080:6080 -it unidata/cloudawips
