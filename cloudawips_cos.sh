@@ -12,12 +12,48 @@ echo " "
 sleep 3 # Pause before installation process
 
 echo "Beginning the Docker Installation/Update..."
-sudo service docker stop
-sudo yum install docker # Install Docker if not installed already
-sudo yum update docker # Update Docker if already installed
+
+echo "--- Bug with Docker on CentOS *** PLEASE ADVISE! ---"
+echo "In order for Docker to run correctly, the script must"
+echo "update the system packages. This may take a while, it"
+echo "mainly depends on your internet speed. First, we will"
+echo "install or update Docker, and then update the system."
+echo "--- Bug with Docker on CentOS *** PLEASE ADVISE! ---"
+
+sleep 1
+
+sudo yum -y install docker # Install Docker if not installed already
+sudo yum -y update docker # Update Docker if preinstalled and verify latest ver
+
+sleep 1
+
+echo "--- Docker installation nearly completed ---"
+echo "In order to complete the installation, the script will"
+echo "now attempt to update the system packages. If you do not"
+echo "let this action complete, Docker will break and you will"
+echo "be unable to run CloudAWIPS."
+echo "--- Docker installation nearly completed ---"
+
+sleep 1
+
+sudo yum -y update
+
+sleep 1
+
+echo "--- Reboot may be required to start Docker ---"
+echo "While all systems may not require this, you may need"
+echo "to reboot the system in order for Docker to start. If"
+echo "you see an error regarding Docker failing to start,"
+echo "please reboot the system and run the script again."
+echo "--- Reboot may be required to start Docker ---"
+
+sleep 1
+
 sudo service docker start
 echo "Now attempting to print Docker Version Info..."
+echo ">>> IF DOCKER DAEMON IS NOT RUNNING PLEASE REBOOT AND RE-RUN SCRIPT! <<<"
 sudo docker version
+echo ">>> IF DOCKER DAEMON IS NOT RUNNING PLEASE REBOOT AND RE-RUN SCRIPT! <<<"
 echo " "
 
 sleep 3 # Pause before docker pull
