@@ -53,6 +53,11 @@ echo " "
 echo "To access CloudAWIPS, please navigate to localhost:6080 -- you should be"
 echo "presented with a CAVE environment and not much else. The window manager"
 echo "doesn't have any desktop."
+echo " "
+echo "In the future, please start CloudAWIPS by running:"
+echo "   sudo ./startcloudawips.sh"
+echo "You may need to run sudo chmod a+x startcloudawips.sh"
+echo "to set the script as executable."
 echo "--- The installer has successfully pulled the latest CloudAWIPS Image. ---"
-wget -O startcloudawips.sh # CREATE THE STARTUP SCRIPT AND LINK HERE!
+wget -O startcloudawips.sh https://raw.githubusercontent.com/Severe-Weather-Information-Center/cloudawips-scripts/main/startscript.sh
 docker run -p 6080:6080 -it unidata/cloudawips
