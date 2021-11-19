@@ -26,6 +26,6 @@
 - Password protecting the session may cause the website not to load
 - WarnGen Issues
   - Clicking Create Text in WarnGen will generate the product, but the Send button has been removed and the Save button is grayed out.
-- Localization issues
+- Localization Issues
   - It is impossible to remove the `UNLOCALIZED SITE` in WarnGen Text
   - You will need to manually update the localization settings by going to `CAVE > Preferences > Localization`. Unaware if settings are persistent after you stop the container.
