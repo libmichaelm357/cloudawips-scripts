@@ -1,6 +1,6 @@
 # Instructions for installing CloudAWIPS on CentOS
 
-1. Install CentOS 7 with NO DESKTOP ENVIRONMENT (may be on a cloud provider or bare metal, must have 2GB of RAM or more to run -- swap space will not substitute! -- virtual machines most likely won't work at this time, haven't tested)
+1. Install CentOS 7 with NO DESKTOP ENVIRONMENT (may be on a cloud provider or bare metal, must have 2GB of RAM or more to run -- swap space will not substitute! --  virtual machines ran on your local computer most likely won't work at this time, haven't tested)
 
 2. Login to the console via keyboard/mouse or ssh -- I don't recommend using the root account for various reasons
 
@@ -24,6 +24,8 @@
 
 - Using less than 2GB RAM will result in AWIPS not starting
 - Password protecting the session may cause the website not to load
+- WarnGen Issues
+  - Clicking Create Text in WarnGen will generate the product, but the Send button has been removed and the Save button is grayed out.
 - Localization issues
   - It is impossible to remove the `UNLOCALIZED SITE` in WarnGen Text
   - You will need to manually update the localization settings by going to `CAVE > Preferences > Localization`. Unaware if settings are persistent after you stop the container.
