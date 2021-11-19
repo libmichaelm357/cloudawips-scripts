@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#  CLOUDAWIPS INSTALLATION UTILITY for CENTOS 7
+#  REVISION 0a11 PUSHED TO BRANCH main AT github
+#  (C) JADON PHILLIPS 2021 - DO NOT DISTRIBUTE!
+
 echo "Please wait, attempting to begin the CloudAWIPS installation."
 echo " "
 echo "********** WARNING! **********"
